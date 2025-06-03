@@ -87,6 +87,10 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
+  fonts.packages = [
+    pkgs.nerd-fonts.jetbrains-mono
+  ];
+
   programs.hyprlock = {
     enable = true;
   };
@@ -111,6 +115,15 @@
 
   programs.git = {
     enable = true;
+    config = {
+      init = {
+        defaultBranch = "main";
+      };
+      user = {
+        name = "RSGameTech";
+        email = "rsgame0604@gmail.com";
+      };
+    };
   };  
 
   # Configure keymap in X11
@@ -165,14 +178,12 @@
     matugen
     material-symbols
     hyprpaper
-    waybar
     wlogout
     rofi-wayland
     wl-clipboard
     brightnessctl
     playerctl
     pavucontrol
-    git
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     lshw
