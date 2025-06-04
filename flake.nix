@@ -30,7 +30,8 @@
       loq15iax9 = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs outputs; };
         modules = [
-          ./configuration.nix
+          ./hosts/loq15iax9/configuration.nix
+          ./modules
         ];
       };
     };

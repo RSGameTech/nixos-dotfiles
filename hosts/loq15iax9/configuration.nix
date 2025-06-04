@@ -87,9 +87,7 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
-  fonts.packages = [
-    pkgs.nerd-fonts.jetbrains-mono
-  ];
+  hardware.bluetooth.enable = true;
 
   programs.hyprlock = {
     enable = true;
@@ -133,22 +131,8 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
-  # Enable sound.
-  # services.pulseaudio.enable = true;
-  # OR
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa = {
-      enable = true;
-      support32Bit = true;
-    };
-    pulse.enable = true;
-    jack.enable = true;
-  };
-
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.libinput.enable = true;
+  services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.rsgametech = {
