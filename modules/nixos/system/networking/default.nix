@@ -1,6 +1,5 @@
 {...}: {
   imports = [
-    ./system
-    ./graphics
+    ./bluetooth.nix
   ];
 }
