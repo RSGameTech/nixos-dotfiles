@@ -52,26 +52,12 @@
     };
   };
 
-  programs.hyprlock = {
-    enable = true;
-  };
-
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-    # nvidiaPatches = true;
-    xwayland.enable = true;
+  programsModule = {
+    hyprland.enable = true;
   };
 
   programs.waybar = {
     enable = true;    
-  };
-
-  xdg.portal = {
-    enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
-    ];
   };
 
   programs.git = {
@@ -113,18 +99,8 @@
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
     lenovo-legion
-    inputs.quickshell.packages.${pkgs.system}.default
-    swww
-    uwsm
     kitty
     matugen
-    material-symbols
-    hyprpaper
-    wlogout
-    rofi-wayland
-    wl-clipboard
-    brightnessctl
-    playerctl
     pavucontrol
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
@@ -132,8 +108,6 @@
     pipewire
     wireplumber
     alsa-utils
-    kdePackages.qtbase
-    libsForQt5.qt5.qtbase
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
