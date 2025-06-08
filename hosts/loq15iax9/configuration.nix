@@ -37,9 +37,6 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  #    intelBusId = "PCI:0:2:0";
-  #    nvidiaBusId = "PCI:1:0:0";
-
   graphicsModule = {
     intel.enable = true;
     nvidia = {
@@ -93,12 +90,6 @@
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "caps:escape";
-
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.rsgametech = {
