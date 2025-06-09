@@ -1,4 +1,6 @@
-pkgs: {
+pkgs: let
+  kokomiCursor = pkgs.callPackage ../../../../pkgs/kokomiCursor.nix{};
+in {
   programs.hyprland = {
     enable = true;
     withUWSM = true;
@@ -9,6 +11,8 @@ pkgs: {
   qt.enable = true;
 
   environment.systemPackages = [
+    kokomiCursor
+
     pkgs.kdePackages.qt6ct
 
     pkgs.rose-pine-icon-theme
