@@ -8,7 +8,6 @@
   imports =
     [
       ./hardware-configuration.nix
-      # inputs.home-manager.nixosModules.default
     ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
