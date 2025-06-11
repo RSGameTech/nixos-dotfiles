@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      inputs.home-manager.nixosModules.default
     ];
 
   # Use latest kernel.
@@ -90,6 +91,16 @@
       vesktop
       vscode
     ];
+  };
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    backupFileExtension = "backup";
+    users = {
+      rsgametech = import ./home.nix;
+    };
   };
 
   # List packages installed in system profile.
