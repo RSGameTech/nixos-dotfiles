@@ -6,15 +6,14 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
+      # inputs.home-manager.nixosModules.default
     ];
 
-  # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "ayaka-loq15iax9"; # Define your hostname.
+  networking.hostName = "ayaka-loq15iax9";
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
@@ -35,7 +34,6 @@
   # };
 
   nixpkgs.config.allowUnfree = true;
-
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   graphicsModule = {
@@ -75,36 +73,38 @@
         email = "rsgame0604@gmail.com";
       };
     };
-  };  
+  };
+
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+    shellAliases = {
+      ll = "ls -l";
+      la = "ls -la";
+      gs = "git status";
+      gc = "git commit -m";
+      ga = "git add .";
+      gp = "git push";
+    };
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.rsgametech = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
       tree
       fastfetch
       btop
-      localsend
       brave
-      materialgram
       vesktop
       vscode
     ];
   };
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    backupFileExtension = "backup";
-    users = {
-      rsgametech = import ./home.nix;
-    };
-  };
-
-  # List packages installed in system profile.
-  # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
     lenovo-legion
     kitty
@@ -117,14 +117,6 @@
     wireplumber
     alsa-utils
   ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
   # List services that you want to enable:
 
