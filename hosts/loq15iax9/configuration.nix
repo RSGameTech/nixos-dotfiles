@@ -2,12 +2,11 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, inputs, ... }:
-
-{
+{ config, lib, pkgs, inputs, ... }: {
   imports =
     [
       ./hardware-configuration.nix
+      ./user-configuration.nix
     ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -61,49 +60,6 @@
     enable = true;    
   };
 
-  programs.git = {
-    enable = true;
-    config = {
-      init = {
-        defaultBranch = "main";
-      };
-      user = {
-        name = "RSGameTech";
-        email = "rsgame0604@gmail.com";
-      };
-    };
-  };
-
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-    shellAliases = {
-      ll = "ls -l";
-      la = "ls -la";
-      gs = "git status";
-      gc = "git commit -m";
-      ga = "git add .";
-      gp = "git push";
-    };
-  };
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.rsgametech = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ];
-    shell = pkgs.zsh;
-    packages = with pkgs; [
-      tree
-      fastfetch
-      btop
-      brave
-      vesktop
-      vscode
-    ];
-  };
-
   environment.systemPackages = with pkgs; [
     lenovo-legion
     kitty
@@ -116,8 +72,6 @@
     wireplumber
     alsa-utils
   ];
-
-  # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
