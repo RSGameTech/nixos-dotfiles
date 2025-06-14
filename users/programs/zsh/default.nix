@@ -11,6 +11,7 @@
       gc = "git commit -m";
       ga = "git add .";
       gp = "git push";
+      nrsf = "sudo nixos-rebuild switch --flake";
     };
   };
 }
