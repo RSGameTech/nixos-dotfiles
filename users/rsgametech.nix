@@ -34,6 +34,7 @@ in {
       ".config/hypr".source = ./config/hypr;
       ".config/waybar".source = ./config/waybar;
       ".config/quickshell".source = ./config/quickshell;
+      ".config/wlogout".source = ./config/wlogout;
       ".config/kitty".source = ./config/kitty;
     };
   };
