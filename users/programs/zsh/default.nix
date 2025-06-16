@@ -7,6 +7,7 @@
     shellAliases = {
       ll = "ls -l";
       la = "ls -la";
+      ff = "fastfetch";
       gs = "git status";
       gc = "git commit -m";
       ga = "git add .";

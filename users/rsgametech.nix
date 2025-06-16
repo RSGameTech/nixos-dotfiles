@@ -12,6 +12,7 @@ in {
     inherit description;
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "adbusers" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
       tree
       fastfetch
@@ -29,7 +30,11 @@ in {
     directory = config.users.users.${username}.home;
     clobberFiles = lib.mkForce true;
     files = {
+      ".config/uwsm/env".source = ./config/uwsm/env;
       ".config/hypr".source = ./config/hypr;
+      ".config/waybar".source = ./config/waybar;
+      ".config/quickshell".source = ./config/quickshell;
+      ".config/kitty".source = ./config/kitty;
     };
   };
 }

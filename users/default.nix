@@ -3,5 +3,5 @@
   users,
   ...
 }: {
-  imports = [ inputs.hjem.nixosModules.default ] ++ buildins.map (username: ./${username}.nix) users;
+  imports = [ inputs.hjem.nixosModules.default ] ++ builtins.map (username: ./${username}.nix) users;
 }
