@@ -35,11 +35,12 @@
       loq15iax9 = nixpkgs.lib.nixosSystem {
         specialArgs = { 
           inherit inputs outputs;
-          # users = ["rsgametech"];  ## Need to check Rexi's user configuration for understanding :)
+          users = ["rsgametech"];  ## Need to check Rexi's user configuration for understanding :)
         };
         modules = [
           ./hosts/loq15iax9/configuration.nix
           ./modules
+          ./users
         ];
       };
       
