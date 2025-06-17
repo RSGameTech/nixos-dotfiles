@@ -45,27 +45,32 @@ Scope {
           radius: Measurement.mainRadius
           
           RowLayout {
-            spacing: 0
+            spacing: Measurement.barPadding
             layoutDirection: Qt.LeftToRight
             anchors.left: parent.left
             anchors.top: parent.top
             anchors.bottom: parent.bottom
             anchors.leftMargin: Measurement.barPadding
-            Workspaces {bar: bar}
+            anchors.topMargin: Measurement.barPadding
+            anchors.bottomMargin: Measurement.barPadding
+            // Workspaces {bar: bar}
+            WorkspaceWindow {bar: bar}
             
           }
           RowLayout { // Centre
             spacing: Measurement.barPadding
             anchors.centerIn: parent
-            height:parent.height
+            anchors.topMargin: Measurement.barPadding
+            anchors.bottomMargin: Measurement.barPadding
 
             // ClockWidget {bar: bar}
-            // Text {
-            //   id: clock
-            //   text: qsTr(time)
-            //   color: "#ffffff"
-            // }
-            Window {}
+            Text {
+              id: clock
+              text: qsTr(time)
+              color: Colors.primary
+              font.pointSize: 10
+            }
+            // Window {}
           }
           RowLayout {
             spacing: Measurement.barPadding
@@ -74,16 +79,14 @@ Scope {
             anchors.top: parent.top
             anchors.bottom: parent.bottom
             anchors.rightMargin: Measurement.barPadding
+            anchors.topMargin: Measurement.barPadding
+            anchors.bottomMargin: Measurement.barPadding
             // Workspaces {bar: bar}
             Powermenu {}
             Battery{ bar: bar }
-
-            
           }
         }
       }
-
-      
     }
   }
 

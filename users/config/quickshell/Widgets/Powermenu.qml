@@ -7,7 +7,7 @@ import "../Global"
 
 Rectangle {
     id: powerButton
-    height: parent.height - (Measurement.barPadding * 2)
+    height: parent.height
     width: powerButton.height
     radius: Measurement.outterRadius
     color: Colors.on_primary

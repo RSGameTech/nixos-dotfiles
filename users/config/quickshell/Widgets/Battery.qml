@@ -9,7 +9,7 @@ Rectangle {
     id: batteryWidget
     required property PanelWindow bar
 
-    height: parent.height - (Measurement.barPadding * 2)
+    height: parent.height
     width: 72
     radius: Measurement.outterRadius
     anchors.verticalCenter: parent.verticalCenter
