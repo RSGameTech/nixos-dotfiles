@@ -30,7 +30,7 @@ List of device I use
 Thanks to everyone who made there flake publicly available which made to figure things out easily.
 
 Special Thanks to:
-- [Rexcracy804](https://github.com/Rexcrazy804) - For helping getting started in NixOS journey and Quickshell. And thanks to his flake config I figured out lots of things.
+- [Rexcrazy804](https://github.com/Rexcrazy804) - For helping getting started in NixOS journey and Quickshell. And thanks to his flake config I figured out lots of things.
 - [Vimjoyer](https://youtube.com/@vimjoyer) - For a wonderful guide for configuring NixOS and its flake.
 
 # Licensing
