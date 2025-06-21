@@ -20,7 +20,7 @@ Rectangle {
     property bool isPluggedIn: false
     property string batteryIcon: ""
 
-    color: batteryLevel <= 20 && batteryState === "discharging" ? Colors.on_error : Colors.on_primary
+    color: batteryLevel <= 20 && batteryState === "discharging" ? Colors.on_error : Colors.primary_container
 
     Row {
         anchors.centerIn: parent
@@ -32,7 +32,7 @@ Rectangle {
             font.family: "FiraCode Nerd Font"
             font.pixelSize: 12
             verticalAlignment: parent.verticalAlignment.Center
-            color: batteryLevel <= 20 && batteryState === "discharging" ? Colors.error : Colors.primary
+            color: batteryLevel <= 20 && batteryState === "discharging" ? Colors.error : Colors.on_primary_container
         }
 
         Text {
@@ -41,7 +41,7 @@ Rectangle {
             font.pixelSize: 12
             font.bold: true
             verticalAlignment: parent.verticalAlignment.Center
-            color: batteryLevel <= 20 && batteryState === "discharging" ? Colors.error : Colors.primary
+            color: batteryLevel <= 20 && batteryState === "discharging" ? Colors.error : Colors.on_primary_container
         }
     }
 

@@ -12,7 +12,7 @@ Rectangle {
   height: parent.height
   implicitWidth: workRow.width + 6
   radius: Measurement.outterRadius
-  color: Colors.on_primary
+  color: Colors.primary_container
   // clip: true
 
   readonly property Toplevel activeWindow: ToplevelManager.activeToplevel
@@ -29,13 +29,13 @@ Rectangle {
       radius: Measurement.outterRadius
       Layout.fillHeight: true
       Layout.preferredWidth: height
-      
       Text {
         id: workspaceNumText
         anchors.centerIn: parent
         color: Colors.on_primary
         text: Hyprland.focusedWorkspace?.id ?? "0"
         font.pointSize: 10
+        font.bold: true
       }
     }
     Item {
@@ -44,7 +44,7 @@ Rectangle {
       Text {
         anchors.centerIn: parent
         id: activeWindowText
-        color: Colors.primary
+        color: Colors.on_primary_container
         font.pointSize: 10
         text: activeWindow?.activated ? activeWindow?.appId : "Desktop"
       }

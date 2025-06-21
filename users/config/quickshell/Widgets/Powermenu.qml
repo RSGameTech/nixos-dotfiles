@@ -10,14 +10,14 @@ Rectangle {
     height: parent.height
     width: powerButton.height
     radius: Measurement.outterRadius
-    color: Colors.on_primary
+    color: Colors.primary_container
     anchors.verticalCenter: parent.verticalCenter
 
     Text {
         anchors.centerIn: parent
         text: "⏻"
         font.pixelSize: 22
-        color: Colors.primary
+        color: Colors.on_primary_container
     }
 
     Process {

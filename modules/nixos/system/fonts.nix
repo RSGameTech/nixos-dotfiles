@@ -4,6 +4,8 @@
     packages = let
       nerdFonts = with pkgs.nerd-fonts; [
         jetbrains-mono
+        fira-code
+        fira-mono
       ];
       noto = with pkgs; [
         noto-fonts

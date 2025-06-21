@@ -84,6 +84,7 @@ Scope {
             // Workspaces {bar: bar}
             Powermenu {}
             Battery{ bar: bar }
+            Network { bar: bar }
           }
         }
       }
