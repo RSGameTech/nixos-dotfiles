@@ -1,4 +1,5 @@
 import QtQuick
+import QtQuick.Layouts
 import Quickshell
 import Quickshell.Io
 import QtQuick.Controls
@@ -7,11 +8,12 @@ import "../Global"
 
 Rectangle {
     id: powerButton
-    height: parent.height
-    width: powerButton.height
+    // height: parent.height
+    // width: powerButton.height
     radius: Measurement.outterRadius
     color: Colors.primary_container
-    anchors.verticalCenter: parent.verticalCenter
+    Layout.fillHeight: true
+    Layout.preferredWidth: height
 
     Text {
         anchors.centerIn: parent

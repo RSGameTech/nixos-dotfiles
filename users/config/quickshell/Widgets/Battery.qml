@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
 import Quickshell
 import Quickshell.Io
 
@@ -9,10 +10,11 @@ Rectangle {
     id: batteryWidget
     required property PanelWindow bar
 
-    height: parent.height
-    width: 72
+    // height: parent.height
+    // width: 72
     radius: Measurement.outterRadius
-    anchors.verticalCenter: parent.verticalCenter
+    Layout.fillHeight: true
+    Layout.preferredWidth: 72
 
     property int batteryLevel: 100
     property string batteryText: "100%"
@@ -31,7 +33,7 @@ Rectangle {
             text: batteryIcon
             font.family: "FiraCode Nerd Font"
             font.pixelSize: 12
-            verticalAlignment: parent.verticalAlignment.Center
+            verticalAlignment: Text.AlignVCenter
             color: batteryLevel <= 20 && batteryState === "discharging" ? Colors.error : Colors.on_primary_container
         }
 
@@ -40,7 +42,7 @@ Rectangle {
             text: batteryText
             font.pixelSize: 12
             font.bold: true
-            verticalAlignment: parent.verticalAlignment.Center
+            verticalAlignment: Text.AlignVCenter
             color: batteryLevel <= 20 && batteryState === "discharging" ? Colors.error : Colors.on_primary_container
         }
     }

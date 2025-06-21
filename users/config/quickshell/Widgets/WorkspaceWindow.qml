@@ -28,6 +28,7 @@ Rectangle {
       color: Colors.primary
       radius: Measurement.outterRadius
       Layout.fillHeight: true
+      Layout.minimumWidth: 20
       Layout.preferredWidth: height
       Text {
         id: workspaceNumText

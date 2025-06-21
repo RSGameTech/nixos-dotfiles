@@ -53,7 +53,6 @@ Scope {
             anchors.leftMargin: Measurement.barPadding
             anchors.topMargin: Measurement.barPadding
             anchors.bottomMargin: Measurement.barPadding
-            // Workspaces {bar: bar}
             WorkspaceWindow {bar: bar}
             
           }
@@ -63,13 +62,13 @@ Scope {
             anchors.topMargin: Measurement.barPadding
             anchors.bottomMargin: Measurement.barPadding
 
-            // ClockWidget {bar: bar}
-            Text {
-              id: clock
-              text: qsTr(time)
-              color: Colors.primary
-              font.pointSize: 10
-            }
+            Clock {}
+            // Text {
+            //   id: clock
+            //   text: qsTr(time)
+            //   color: Colors.primary
+            //   font.pointSize: 10
+            // }
             // Window {}
           }
           RowLayout {
@@ -81,10 +80,8 @@ Scope {
             anchors.rightMargin: Measurement.barPadding
             anchors.topMargin: Measurement.barPadding
             anchors.bottomMargin: Measurement.barPadding
-            // Workspaces {bar: bar}
             Powermenu {}
             Battery{ bar: bar }
-            Network { bar: bar }
           }
         }
       }
