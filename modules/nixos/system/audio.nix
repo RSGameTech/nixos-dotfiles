@@ -12,6 +12,11 @@
     jack.enable = true;
     wireplumber = {
       enable = true;
+      extraConfig = {
+        "50-alsa-policy" = {
+          "default.policy.auto-switch" = true;
+        };
+      };
     };
   };
 }
