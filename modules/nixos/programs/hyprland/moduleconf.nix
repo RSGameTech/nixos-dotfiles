@@ -54,4 +54,6 @@ in {
       pkgs.kdePackages.qtmultimedia
     ];
   };
+
+  security.soteria.enable = true;
 }
