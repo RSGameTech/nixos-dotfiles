@@ -30,12 +30,14 @@ in {
     directory = config.users.users.${username}.home;
     clobberFiles = lib.mkForce true;
     files = {
+      "pictures/wallpapers".source = ../assets/wallpapers;
       ".config/uwsm/env".source = ./config/uwsm/env;
       ".config/hypr".source = ./config/hypr;
       ".config/waybar".source = ./config/waybar;
       ".config/quickshell".source = ./config/quickshell;
       ".config/wlogout".source = ./config/wlogout;
       ".config/kitty".source = ./config/kitty;
+      ".config/yazi".source = ./config/yazi;
     };
   };
 }
