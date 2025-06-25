@@ -12,20 +12,19 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
-  # Set your time zone.
   time.timeZone = "Asia/Kolkata";
+
+  # Enable automatic garbage collection
+  nix = {
+    gc.automatic = true;
+    gc.dates = "daily";
+    gc.options = "--delete-older-than 14d";
+    settings.auto-optimise-store = true;
+  };
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
 
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -52,21 +51,18 @@
     hyprland.enable = true;
   };
 
-  programs.waybar = {
-    enable = true;    
-  };
+  # programs.waybar = {
+  #   enable = true;    
+  # };
 
   environment.systemPackages = with pkgs; [
     lenovo-legion
     kitty
     matugen
     pavucontrol
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim
     wget
     lshw
-    pipewire
-    wireplumber
-    alsa-utils
   ];
 
   # Enable the OpenSSH daemon.
