@@ -18,6 +18,7 @@ in {
       fastfetch
       btop
       brave
+      localsend
       vesktop
       vscode
       bat
