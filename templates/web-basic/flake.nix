@@ -1,5 +1,5 @@
 {
-  description = "Web Development Environment";
+  description = "Basic Web Development Environment";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -14,8 +14,15 @@
     forAllSystems = fn: nixpkgs.lib.genAttrs systems (
       system: fn (import nixpkgs { inherit system; })
     );
-  {
-    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
-    packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
+  in {
+    devShells = forAllSystems (pkgs: {
+      default = pkgs.mkShell {
+        buildInputs = [
+          pkgs.live-server
+          pkgs.nodejs
+        ];
+        shellHook = "echo Web Dev Environment Ready!";
+      };
+    });
   };
 }

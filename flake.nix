@@ -46,5 +46,13 @@
       
       # asus-x541uv = planning to add this later after I fix the issues with the hardware.
     };
+
+    templates = {
+      web-basic = {
+        path = ./templates/web-basic;
+        description = "A basic web template with a simple HTML structure.";
+        welcomeMessage = "A minimal web-basic template! (by RSGameTech)";
+      };
+    };
   };
 }
