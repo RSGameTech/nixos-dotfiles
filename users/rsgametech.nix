@@ -20,6 +20,7 @@ in {
       brave
       vesktop
       vscode
+      bat
     ];
   };
 

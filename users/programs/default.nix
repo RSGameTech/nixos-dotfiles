@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    ./zsh
+    # ./zsh
     ./git
     ./adb.nix
   ];
