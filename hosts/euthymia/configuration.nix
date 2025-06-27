@@ -7,7 +7,7 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "ayaka-loq15iax9";
+  networking.hostName = "euthymia";
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
@@ -49,10 +49,6 @@
     };
     hyprland.enable = true;
   };
-
-  # programs.waybar = {
-  #   enable = true;    
-  # };
 
   environment.systemPackages = with pkgs; [
     lenovo-legion
