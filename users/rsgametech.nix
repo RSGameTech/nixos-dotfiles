@@ -11,7 +11,7 @@ in {
   users.users.${username} = {
     inherit description;
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "adbusers" ];
+    extraGroups = [ "wheel" "networkmanager" "adbusers" "audio" "multimedia" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
       tree

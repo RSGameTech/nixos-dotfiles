@@ -7,6 +7,11 @@
       url = "github:feel-co/hjem";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.agenix.inputs.darwin.follows = "";
+    };
     quickshell = {
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -41,6 +46,7 @@
           ./hosts/loq15iax9/configuration.nix
           ./modules
           ./users
+          inputs.agenix.nixosModules.default
         ];
       };
       
@@ -51,7 +57,7 @@
       web-basic = {
         path = ./templates/web-basic;
         description = "A basic web template with a simple HTML structure.";
-        welcomeMessage = "A minimal web-basic template! (by RSGameTech)";
+        welcomeText = "A minimal web-basic template! (by RSGameTech)";
       };
     };
   };
