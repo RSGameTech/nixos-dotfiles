@@ -1,12 +1,12 @@
 let
   users = {
     rsgametech = [
-
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC3KM+XdFXPhELWHMc6Dm02N9eEYskYbcfSSqfbUWbsR rsgametech@euthymia"
     ];
   };
-  hosts = {
-    loq15iax9 = [];
-  };
+  # hosts = {
+  #   euthymia = [];
+  # };
 in {
-  # "secret1.age".publicKeys = hosts.loq15iax9;
+  "secret1.age".publicKeys = users.rsgametech;
 }
