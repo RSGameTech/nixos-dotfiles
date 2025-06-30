@@ -58,7 +58,6 @@
     vim
     wget
     lshw
-    inputs.agenix.packages.${pkgs.system}.default
   ];
 
   # Enable the OpenSSH daemon.

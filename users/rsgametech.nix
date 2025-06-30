@@ -12,6 +12,7 @@ in {
     inherit description;
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "adbusers" "audio" "multimedia" ];
+    hashedPasswordFile = config.age.secrets.rsgtPass.path;
     shell = pkgs.zsh;
     packages = with pkgs; [
       tree
@@ -22,7 +23,14 @@ in {
       vesktop
       vscode
       bat
+      cbonsai
+      # vmware-horizon-client
     ];
+  };
+
+  age.secrets.rsgtPass = {
+    file = ../secrets/secret1.age;
+    owner = username;
   };
 
   # hjem

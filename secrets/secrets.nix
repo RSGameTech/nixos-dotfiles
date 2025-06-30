@@ -9,4 +9,5 @@ let
   # };
 in {
   "secret1.age".publicKeys = users.rsgametech;
+  "secret2.age".publicKeys = users.rsgametech;
 }

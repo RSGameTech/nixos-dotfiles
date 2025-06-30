@@ -8,5 +8,12 @@
   hardware.enableAllFirmware = true;
   hardware.steam-hardware.enable = true;
 
-  services.libinput.enable = true;
+  services.libinput = {
+    enable = true;
+    mouse.accelProfile = "flat";
+    touchpad = {
+      accelProfile = "flat";
+      disableWhileTyping = true;
+    };
+  };
 }
