@@ -14,22 +14,28 @@ in {
     kokomiCursor
 
     pkgs.kdePackages.qt6ct
+    pkgs.kdePackages.breeze
 
     pkgs.rose-pine-icon-theme
     pkgs.rose-pine-gtk-theme
 
     pkgs.swww
-    pkgs.hyprpaper
     pkgs.wl-clipboard
     pkgs.cliphist
     pkgs.brightnessctl
     pkgs.playerctl
     pkgs.fuzzel
     pkgs.rofi-wayland
-    pkgs.wl-screenrec
     pkgs.wlogout
+    pkgs.wl-screenrec
+    pkgs.wayfreeze
     pkgs.libnotify
+    pkgs.grim
+    pkgs.slurp
+    pkgs.swappy
     pkgs.networkmanagerapplet
+    pkgs.mpv
+    pkgs.imv
 
     pkgs.yazi
     pkgs.ripdrag
