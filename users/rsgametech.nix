@@ -24,6 +24,8 @@ in {
       vscode
       bat
       cbonsai
+      cider
+      scrcpy
       # vmware-horizon-client
     ];
   };

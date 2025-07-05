@@ -63,13 +63,6 @@ Scope {
             anchors.bottomMargin: Measurement.barPadding
 
             Clock {}
-            // Text {
-            //   id: clock
-            //   text: qsTr(time)
-            //   color: Colors.primary
-            //   font.pointSize: 10
-            // }
-            // Window {}
           }
           RowLayout {
             spacing: Measurement.barPadding
@@ -86,21 +79,5 @@ Scope {
         }
       }
     }
-  }
-
-  Process {
-    id: timeProc
-    command: ["sh", "-c", "date +%I:%M%P"]
-    running: true
-    stdout: SplitParser {
-      onRead: data => time = data
-    }
-  }
-
-  Timer {
-    interval: 1000
-    running: true
-    repeat: true
-    onTriggered: timeProc.running = true
   }
 }

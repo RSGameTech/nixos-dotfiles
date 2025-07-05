@@ -52,12 +52,16 @@
 
   environment.systemPackages = with pkgs; [
     lenovo-legion
+    libsForQt5.qt5.qtwayland
+    kdePackages.qtwayland
     kitty
     matugen
     pavucontrol
     vim
     wget
     lshw
+    sbctl
+    niv
   ];
 
   # Enable the OpenSSH daemon.
