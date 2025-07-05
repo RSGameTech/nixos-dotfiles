@@ -7,6 +7,10 @@
       url = "github:feel-co/hjem";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.2";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     agenix = {
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -47,6 +51,25 @@
           ./modules
           ./users
           inputs.agenix.nixosModules.default
+          inputs.lanzaboote.nixosModules.lanzaboote
+          ({ pkgs, lib, ... }: {
+
+            environment.systemPackages = [
+              # For debugging and troubleshooting Secure Boot.
+              pkgs.sbctl
+            ];
+
+            # Lanzaboote currently replaces the systemd-boot module.
+            # This setting is usually set to true in configuration.nix
+            # generated at installation time. So we force it to false
+            # for now.
+            boot.loader.systemd-boot.enable = lib.mkForce false;
+
+            boot.lanzaboote = {
+              enable = true;
+              pkiBundle = "/var/lib/sbctl";
+            };
+          })
         ];
       };
       

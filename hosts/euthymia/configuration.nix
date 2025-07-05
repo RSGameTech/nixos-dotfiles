@@ -3,6 +3,7 @@
     [
       ./hardware-configuration.nix
       ./user-configuration.nix
+      # ./lanzaboote.nix
     ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
