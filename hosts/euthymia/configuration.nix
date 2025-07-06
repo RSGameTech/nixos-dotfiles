@@ -48,7 +48,7 @@
   };
 
   programsModule = {
-    sddm-custom-theme = {
+    sddm-silent-theme = {
       enable = true;
     };
     hyprland.enable = true;

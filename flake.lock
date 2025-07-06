@@ -289,6 +289,7 @@
         "lanzaboote": "lanzaboote",
         "nixpkgs": "nixpkgs",
         "quickshell": "quickshell",
+        "silentSDDM": "silentSDDM",
         "spicetify-nix": "spicetify-nix"
       }
     },
@@ -332,6 +333,26 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "silentSDDM": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1751723717,
+        "narHash": "sha256-s9rarQmtTg/TerGJyMHHQWQSj+JkXKLFDJ56D6u1iUA=",
+        "owner": "uiriansan",
+        "repo": "SilentSDDM",
+        "rev": "8ad3b967fed32d820133a983bf154ab19f89a36c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "uiriansan",
+        "repo": "SilentSDDM",
         "type": "github"
       }
     },
