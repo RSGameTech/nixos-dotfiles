@@ -44,27 +44,13 @@
       euthymia = nixpkgs.lib.nixosSystem {
         specialArgs = { 
           inherit inputs outputs;
-          users = ["rsgametech"];  ## Need to check Rexi's user configuration for understanding :)
+          users = ["rsgametech"];
         };
         modules = [
           ./hosts/euthymia/configuration.nix
           ./modules
           ./users
           inputs.agenix.nixosModules.default
-          # inputs.lanzaboote.nixosModules.lanzaboote
-          # ({ pkgs, lib, ... }: {
-
-          #   environment.systemPackages = [
-          #     pkgs.sbctl
-          #   ];
-          #   boot = {
-          #     loader.systemd-boot.enable = lib.mkForce false;
-          #     lanzaboote = {
-          #       enable = true;
-          #       pkiBundle = "/var/lib/sbctl";
-          #     };
-          #   };
-          # })
         ];
       };
       

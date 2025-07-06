@@ -26,7 +26,6 @@ in {
       cbonsai
       cider
       scrcpy
-      # vmware-horizon-client
     ];
   };
 

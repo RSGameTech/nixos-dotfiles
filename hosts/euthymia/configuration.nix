@@ -3,7 +3,6 @@
     [
       ./hardware-configuration.nix
       ./user-configuration.nix
-      # ./lanzaboote.nix
     ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -53,6 +52,7 @@
       enable = true;
     };
     hyprland.enable = true;
+    spicetify.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
