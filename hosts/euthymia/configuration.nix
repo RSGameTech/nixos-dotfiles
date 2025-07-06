@@ -19,7 +19,7 @@
   nix = {
     gc.automatic = true;
     gc.dates = "daily";
-    gc.options = "--delete-older-than 14d";
+    gc.options = "--delete-older-than 7d";
     settings.auto-optimise-store = true;
   };
 
@@ -28,6 +28,10 @@
 
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  bootModule = {
+    lanzaboote.enable = true; # Enable lanzaboote for secure boot
+  };
 
   graphicsModule = {
     intel.enable = true;
@@ -61,12 +65,7 @@
     vim
     wget
     lshw
-    sbctl
-    niv
   ];
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
