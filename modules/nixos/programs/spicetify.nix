@@ -24,21 +24,25 @@
         enabledExtensions = with spicePkgs.extensions; [
           adblock
           hidePodcasts
-          shuffle # shuffle+ (special characters are sanitized out of extension names)
+          shuffle
+          fullAppDisplayMod
+          volumePercentage
         ];
         enabledCustomApps = with spicePkgs.apps; [
           newReleases
           ncsVisualizer
         ];
         enabledSnippets = with spicePkgs.snippets; [
-          rotatingCoverart
           pointer
+          modernScrollbar
         ];
 
-        theme = spicePkgs.themes.catppuccin;
-        colorScheme = "mocha";
+        theme = spicePkgs.themes.text;
+        # colorScheme = "mocha";
 
         wayland = true;
+
+        # nix eval --impure --json --expr 'builtins.attrNames ((builtins.getFlake "github:Gerg-L/spicetify-nix").legacyPackages.x86_64-linux.snippets)'
       };
     };
 }

@@ -27,10 +27,12 @@
         theme = silentSDDM.pname;
         extraPackages = silentSDDM.propagatedBuildInputs;
         wayland.enable = true;
-        # General = {
-        #   GreeterEnvironment = "QML2_IMPORT_PATH=${silentSDDM}/share/sddm/themes/${silentSDDM.pname}/components/,QT_IM_MODULE=qtvirtualkeyboard";
-        #   InputMethod = "qtvirtualkeyboard";
-        # };
+        settings = {
+          General = {
+            GreeterEnvironment = "QML2_IMPORT_PATH=${silentSDDM}/share/sddm/themes/${silentSDDM.pname}/components/,QT_IM_MODULE=qtvirtualkeyboard";
+            InputMethod = "qtvirtualkeyboard";
+          };
+        };
         # settings.Theme.CursorSize = 26;
       };
     };
