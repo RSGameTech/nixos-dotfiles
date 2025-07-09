@@ -54,6 +54,7 @@
     hyprland.enable = true;
     obs-studio.enable = true;
     spicetify.enable = true;
+    aagl.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
@@ -66,6 +67,8 @@
     vim
     wget
     lshw
+    salut
+    zstd
   ];
 
   # Open ports in the firewall.

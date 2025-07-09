@@ -17,7 +17,7 @@ in {
     packages = with pkgs; [
       tree
       fastfetch
-      btop
+      btop-cuda
       brave
       localsend
       vesktop

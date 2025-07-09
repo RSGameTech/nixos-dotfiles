@@ -6,6 +6,7 @@
     ./age.nix
     ./obs-studio.nix
     ./spicetify.nix
+    ./aagl.nix
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";

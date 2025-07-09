@@ -16,4 +16,9 @@
       disableWhileTyping = true;
     };
   };
+
+  # services.undervolt = {
+  #   enable = true;
+  # }
+  powerManagement.cpuFreqGovernor = "ondemand";
 }
