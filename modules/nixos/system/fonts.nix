@@ -13,6 +13,7 @@
         noto-fonts-cjk-sans
         noto-fonts-cjk-serif
         material-symbols
+        material-icons
       ];
     in
       nerdFonts ++ noto;

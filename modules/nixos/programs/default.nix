@@ -6,6 +6,7 @@
     ./age.nix
     ./obs-studio.nix
     ./spicetify.nix
+    ./games.nix
     ./aagl.nix
   ];
 

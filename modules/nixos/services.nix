@@ -1,6 +1,7 @@
 {...}: {
   services.thermald.enable = true;
   services.fwupd.enable = true;
+  services.power-profiles-daemon.enable = true;
 
   services.printing.enable = false;
 

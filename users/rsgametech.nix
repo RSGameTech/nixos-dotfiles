@@ -11,7 +11,7 @@ in {
   users.users.${username} = {
     inherit description;
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "adbusers" "audio" "multimedia" ];
+    extraGroups = [ "wheel" "networkmanager" "adbusers" "gamemode" "audio" "multimedia" ];
     hashedPasswordFile = config.age.secrets.rsgtPass.path;
     shell = pkgs.zsh;
     packages = with pkgs; [
@@ -19,8 +19,10 @@ in {
       fastfetch
       btop-cuda
       brave
+      obsidian
       localsend
       vesktop
+      materialgram
       vscode
       bat
       cbonsai
