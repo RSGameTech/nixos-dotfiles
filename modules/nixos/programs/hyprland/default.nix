@@ -24,6 +24,7 @@
             withQtSvg = true;
             withX11 = false;
             withI3 = false;
+            # withQtSvg = true;
           })
         ];
       }

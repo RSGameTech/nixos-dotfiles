@@ -39,6 +39,10 @@ in {
 
     pkgs.yazi
     pkgs.ripdrag
+
+    pkgs.kdePackages.qtsvg
+    pkgs.kdePackages.qt5compat
+    pkgs.kdePackages.qtimageformats
   ];
 
   xdg.portal = {
@@ -58,6 +62,9 @@ in {
     package = pkgs.kdePackages.sddm;
     extraPackages = [
       pkgs.kdePackages.qtmultimedia
+      pkgs.kdePackages.qtsvg
+      pkgs.kdePackages.qt5compat
+      pkgs.kdePackages.qtimageformats
     ];
   };
 

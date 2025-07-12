@@ -164,11 +164,11 @@
         "smfh": "smfh"
       },
       "locked": {
-        "lastModified": 1751728847,
-        "narHash": "sha256-KU2NiDsR067mCOrkR/29fX7E4PmjfmXIETTicx3CfwA=",
+        "lastModified": 1752303056,
+        "narHash": "sha256-LzojKFWAAreWyH56aupj/MLwuPPnnyzplw/xdbavC9c=",
         "owner": "feel-co",
         "repo": "hjem",
-        "rev": "a1a2680af8038c4b85c6078e44fc3e422c81e04b",
+        "rev": "3093a74542b30f8155954d585d0ae2401e3adbe5",
         "type": "github"
       },
       "original": {
@@ -306,11 +306,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1752146885,
-        "narHash": "sha256-ZJK989GL+bTCQSxbG8v8/7tHMCEl/FPovkeDBNyClQE=",
+        "lastModified": 1752219538,
+        "narHash": "sha256-uckx6ukCJtuAdyGtyqS1OrwAPoxl/LNRyznNO51e8HE=",
         "ref": "refs/heads/master",
-        "rev": "d7079b75241c6e2b67f2429996fa7679ffc052e2",
-        "revCount": 616,
+        "rev": "49a3752b9d79bf9f56d8372de594d54312315470",
+        "revCount": 618,
         "type": "git",
         "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
       },
@@ -381,11 +381,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1752079508,
-        "narHash": "sha256-0GeFXk2poqWbXxq9RtB39mwZB/i2xm2naMdpo3HhdIA=",
+        "lastModified": 1752283754,
+        "narHash": "sha256-ta/LcHZx0dweH+l4wzpZAaZmoQszQ+vd0Mqvj+4ftUA=",
         "owner": "uiriansan",
         "repo": "SilentSDDM",
-        "rev": "d6600b9df7e3d6265f8f84c836fc06168d65e8a2",
+        "rev": "8a9fa53781bcd01379a29bc1c64a69d1478316d9",
         "type": "github"
       },
       "original": {
