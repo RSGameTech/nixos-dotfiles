@@ -33,7 +33,6 @@
             InputMethod = "qtvirtualkeyboard";
           };
         };
-        # settings.Theme.CursorSize = 26;
       };
     };
 }

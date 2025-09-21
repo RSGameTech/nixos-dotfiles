@@ -7,7 +7,7 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "euthymia";
+  networking.hostName = "irminsul";
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
@@ -28,9 +28,9 @@
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  bootModule = {
-    lanzaboote.enable = true; # Enable lanzaboote for secure boot
-  };
+  # bootModule = {
+  #   lanzaboote.enable = true; # Enable lanzaboote for secure boot
+  # };
 
   graphicsModule = {
     intel.enable = true;
@@ -48,30 +48,27 @@
   };
 
   programsModule = {
-    deskEnv.hyprland.enable = true;
-    displayManager = {
-      # sddm.enable = true;
-      # greetd.enable = true;
-      kurukuru.enable = true;
+    sddm-silent-theme = {
+      enable = true;
     };
+    hyprland.enable = true;
     obs-studio.enable = true;
-    spicetify.enable = true;
-    aagl.enable = true;
+    # spicetify.enable = true;
+    # aagl.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
-    lenovo-legion
+    # lenovo-legion
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
     kitty
-    matugen
+    # matugen
     pavucontrol
     vim
     wget
     lshw
     salut
     zstd
-    cowsay
   ];
 
   # Open ports in the firewall.

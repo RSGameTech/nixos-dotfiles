@@ -1,8 +1,9 @@
 {...}: {
   imports = [
-    ./hyprland
+    ./desk-env
+    ./display-manager
     ./terminal
-    ./sddm.nix
+    # ./sddm.nix
     ./age.nix
     ./obs-studio.nix
     ./spicetify.nix

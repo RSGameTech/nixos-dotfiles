@@ -26,7 +26,6 @@ in {
       vscode
       bat
       cbonsai
-      cider
       scrcpy
     ];
   };

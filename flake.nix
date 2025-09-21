@@ -28,6 +28,13 @@
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zaphkiel = {
+      url = "github:Rexcrazy804/Zaphkiel";
+      inputs.nixpkgs.follows = "nixpkgs";
+      # optional
+      # inputs.quickshell.follows = "quickshell";
+      # inputs.systems.follows = "systems";
+    };
   };
 
   outputs = {
@@ -60,8 +67,18 @@
           inputs.agenix.nixosModules.default
         ];
       };
-      
-      # asus-x541uv = planning to add this later after I fix the issues with the hardware.
+      # irminsul = nixpkgs.lib.nixosSystem {
+      #   specialArgs = {
+      #     inherit inputs outputs;
+      #     users = ["rsgametech"];
+      #   };
+      #   modules = [
+      #     ./hosts/irminsul/configuration.nix
+      #     ./modules
+      #     ./users
+      #     inputs.agenix.nixosModules.default
+      #   ];
+      # };
     };
 
     templates = {
