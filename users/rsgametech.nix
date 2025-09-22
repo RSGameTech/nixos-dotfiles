@@ -40,16 +40,26 @@ in {
     enable = true;
     user = username;
     directory = config.users.users.${username}.home;
+    impure = {
+      enable = true;
+      dotsDir = "${./config}";
+      dotsDirImpure = "/home/${username}/nixos-dotfiles/users/config";
+    };
     clobberFiles = lib.mkForce true;
     files = {
       "pictures/wallpapers".source = ../assets/wallpapers;
       ".config/uwsm/env".source = ./config/uwsm/env;
-      ".config/hypr".source = ./config/hypr;
+      # ".config/hypr".source = ./config/hypr;
       ".config/waybar".source = ./config/waybar;
       ".config/quickshell".source = ./config/quickshell;
       ".config/wlogout".source = ./config/wlogout;
       ".config/kitty".source = ./config/kitty;
       ".config/yazi".source = ./config/yazi;
+    };
+    xdg.config.files = let
+      dots = config.hjem.users.${username}.impure.dotsDir;
+    in {
+      "hypr".source = dots + "/hypr";
     };
   };
 }

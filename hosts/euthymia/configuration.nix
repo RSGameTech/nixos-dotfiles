@@ -50,9 +50,9 @@
   programsModule = {
     deskEnv.hyprland.enable = true;
     displayManager = {
-      # sddm.enable = true;
+      sddm.enable = true;
       # greetd.enable = true;
-      kurukuru.enable = true;
+      # kurukuru.enable = true;
     };
     obs-studio.enable = true;
     spicetify.enable = true;

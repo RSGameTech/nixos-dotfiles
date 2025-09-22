@@ -39,7 +39,7 @@
           pkgs.brightnessctl
           pkgs.playerctl
           pkgs.fuzzel
-          pkgs.rofi-wayland
+          pkgs.rofi
           pkgs.wlogout
           pkgs.wl-screenrec
           pkgs.wayfreeze
