@@ -50,8 +50,8 @@ in {
       "pictures/wallpapers".source = ../assets/wallpapers;
       ".config/uwsm/env".source = ./config/uwsm/env;
       # ".config/hypr".source = ./config/hypr;
-      ".config/waybar".source = ./config/waybar;
-      ".config/quickshell".source = ./config/quickshell;
+      # ".config/waybar".source = ./config/waybar;
+      # ".config/quickshell".source = ./config/quickshell;
       ".config/wlogout".source = ./config/wlogout;
       ".config/kitty".source = ./config/kitty;
       ".config/yazi".source = ./config/yazi;
@@ -60,6 +60,7 @@ in {
       dots = config.hjem.users.${username}.impure.dotsDir;
     in {
       "hypr".source = dots + "/hypr";
+      "quickshell".source = dots + "/quickshell";
     };
   };
 }
