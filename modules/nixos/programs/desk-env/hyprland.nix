@@ -57,6 +57,7 @@
           pkgs.kdePackages.qtsvg
           pkgs.kdePackages.qt5compat
           pkgs.kdePackages.qtimageformats
+          pkgs.libsForQt5.qt5.qtgraphicaleffects
 
           (inputs.quickshell.packages.${pkgs.system}.default.override {
             withHyprland = true;

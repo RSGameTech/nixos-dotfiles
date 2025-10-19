@@ -27,6 +27,7 @@ in {
       bat
       cbonsai
       scrcpy
+      anki-bin
     ];
   };
 
