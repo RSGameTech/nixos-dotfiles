@@ -2,8 +2,16 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
+    enableBashCompletion = true;
     autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
+    syntaxHighlighting = {
+      enable = true;
+      highlighters = [ "main" "brackets" "pattern" "root" "line" ];
+      styles = {
+        "alias" = "bold";
+        "path" = "underline";
+      };
+    };
     shellAliases = {
       # Listing Files
       ll = "ls -l";
@@ -23,10 +31,13 @@
       gcl = "git clone";
       gpl = "git pull";
       gps = "git push";
-      
-      gp = "git push";
       # Extra Commands
       ff = "fastfetch";
+    };
+    ohMyZsh = {
+      enable = true;
+      theme = "agnoster";
+      plugins = [ "git" "z"];
     };
   };
 }

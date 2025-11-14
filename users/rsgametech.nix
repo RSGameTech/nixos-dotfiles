@@ -28,6 +28,7 @@ in {
       cbonsai
       scrcpy
       anki-bin
+      openscad
     ];
   };
 
@@ -50,18 +51,16 @@ in {
     files = {
       "pictures/wallpapers".source = ../assets/wallpapers;
       ".config/uwsm/env".source = ./config/uwsm/env;
-      # ".config/hypr".source = ./config/hypr;
-      # ".config/waybar".source = ./config/waybar;
-      # ".config/quickshell".source = ./config/quickshell;
       ".config/wlogout".source = ./config/wlogout;
       ".config/kitty".source = ./config/kitty;
-      ".config/yazi".source = ./config/yazi;
+      # ".config/yazi".source = ./config/yazi;
     };
     xdg.config.files = let
       dots = config.hjem.users.${username}.impure.dotsDir;
     in {
       "hypr".source = dots + "/hypr";
       "quickshell".source = dots + "/quickshell";
+      "yazi".source = dots + "/yazi";
     };
   };
 }

@@ -57,6 +57,7 @@
     obs-studio.enable = true;
     spicetify.enable = true;
     aagl.enable = true;
+    nvf.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
