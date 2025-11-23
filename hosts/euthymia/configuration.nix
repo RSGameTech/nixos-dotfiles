@@ -49,6 +49,7 @@
 
   programsModule = {
     deskEnv.hyprland.enable = true;
+    deskEnv.mangowm.enable = true;
     displayManager = {
       sddm.enable = true;
       # greetd.enable = true;

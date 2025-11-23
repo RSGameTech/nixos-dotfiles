@@ -59,6 +59,7 @@ in {
       dots = config.hjem.users.${username}.impure.dotsDir;
     in {
       "hypr".source = dots + "/hypr";
+      "mango".source = dots + "/mango";
       "quickshell".source = dots + "/quickshell";
       "yazi".source = dots + "/yazi";
     };
