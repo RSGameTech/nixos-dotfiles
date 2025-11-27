@@ -3,9 +3,6 @@
   lib,
   ...
 }: {
-  imports = [
-    ./secureboot.nix
-  ];
   boot = {
     loader = {
       systemd-boot.enable = true;

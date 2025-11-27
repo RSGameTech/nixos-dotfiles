@@ -28,10 +28,6 @@
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  bootModule = {
-    lanzaboote.enable = true; # Enable lanzaboote for secure boot
-  };
-
   graphicsModule = {
     intel.enable = true;
     nvidia = {

@@ -25,14 +25,9 @@
     };
   };
 
-  # programs.steam = {
-  #   enable = true;
-  #   gamescopeSession.enable = true;
-  # };
-
   environment.systemPackages = with pkgs; [
     mangohud
-    protonup
+    protonup-ng
   ];
 
   # environment.sessionVariables = {

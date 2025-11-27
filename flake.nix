@@ -8,10 +8,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hjem-impure.url = "github:Rexcrazy804/hjem-impure";
-    lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.4.2";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     silentSDDM = {
       url = "github:uiriansan/SilentSDDM";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,13 +33,13 @@
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    zaphkiel = {
-      url = "github:Rexcrazy804/Zaphkiel";
-      inputs.nixpkgs.follows = "nixpkgs";
-      # optional
-      # inputs.quickshell.follows = "quickshell";
-      # inputs.systems.follows = "systems";
-    };
+    # zaphkiel = {
+    #   url = "github:Rexcrazy804/Zaphkiel";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   # optional
+    #   # inputs.quickshell.follows = "quickshell";
+    #   # inputs.systems.follows = "systems";
+    # };
   };
 
   outputs = {
