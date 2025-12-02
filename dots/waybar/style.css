@@ -1,0 +1,99 @@
+@import "colors.css";
+
+/* General bar styling: transparent background */
+#waybar {
+  background-color: transparent;
+  color: @on_surface;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 12px;
+}
+
+/* Module spacing */
+.module {
+  padding: 0 10px;
+  /* margin: 4px 8px; */
+  background-color: @background;
+  color: @on_surface;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+#window {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  transition: min-width 0.3s ease, max-width 0.3s ease;
+}
+
+#window.empty {
+  opacity: 0.5;
+  font-style: italic;
+  transition: opacity 0.3s ease;
+}
+
+/* Style for workspaces container */
+#workspaces {
+  padding: 2px;
+}
+
+/* Workspace buttons */
+#workspaces button {
+  color: @on_primary_container;
+  font-weight: bolder;
+  background: @secondary_container;
+  border-radius: 8px;
+  padding: 0 8px;
+  margin: 2px;
+  border: none;
+  box-shadow: none;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Active workspace */
+#workspaces button.active {
+  background: @primary_container;
+  padding: 0 12px;
+  /* border-radius: 100px; */
+  /* font-weight: bold; */
+}
+
+/* Hover effect */
+#workspaces button:hover {
+  background: @primary_container;
+  color: @on_surface;
+}
+
+/* Clock */
+#clock {
+  color: #ffcc00;
+}
+
+/* Network */
+#network {
+  color: @primary;
+}
+
+/* Battery base */
+#battery {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Battery states */
+#battery.charging {
+  color: #00ff99;
+  font-weight: bold;
+}
+
+#battery.plugged {
+  color: #00ccff;
+}
+
+#battery.warning {
+  color: @secondary;
+  background-color: @secondary_container;
+}
+
+#battery.critical {
+  color: @error;
+  background-color: @error_container;
+  font-weight: bold;
+}
+

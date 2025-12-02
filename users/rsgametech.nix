@@ -62,6 +62,7 @@ in {
       "mango".source = dots + "/mango";
       "quickshell".source = dots + "/quickshell";
       "yazi".source = dots + "/yazi";
+      "fuzzel".source = dots + "/fuzzel";
     };
   };
 }

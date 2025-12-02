@@ -67,6 +67,9 @@
             withX11 = false;
             withI3 = false;
           })
+          (inputs.zaphkiel.packages.${pkgs.system}.kurukurubar.override {
+            rembg = pkgs.hello;
+          })
         ];
 
         xdg.portal = {

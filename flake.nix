@@ -33,13 +33,20 @@
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # zaphkiel = {
-    #   url = "github:Rexcrazy804/Zaphkiel";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    #   # optional
-    #   # inputs.quickshell.follows = "quickshell";
-    #   # inputs.systems.follows = "systems";
-    # };
+    zaphkiel = {
+      url = "github:Rexcrazy804/Zaphkiel";
+      inputs.nixpkgs.follows = "nixpkgs";
+      # optional
+      # inputs.quickshell.follows = "quickshell";
+      # inputs.systems.follows = "systems";
+      inputs.hjem.follows = "";
+      inputs.hjem-impure.follows = "";
+      inputs.agenix.follows = "";
+      inputs.crane.follows = "";
+      inputs.stash.follows = "";
+      inputs.booru-hs.follows = "";
+      inputs.hs-todo.follows = "";
+    };
   };
 
   outputs = {

@@ -9,11 +9,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1762958586,
-        "narHash": "sha256-1MryKS54NVQld+xDvCN0OBmAC8Jk+HmplqWbuerrhlk=",
+        "lastModified": 1764169039,
+        "narHash": "sha256-9DabwGlLz2mEOV7nw97HP6LLx1xv4RAHhnQSICbW+mE=",
         "owner": "ezKEa",
         "repo": "aagl-gtk-on-nix",
-        "rev": "0d212e20bebe63b49b588323d37c0cc46bd7000f",
+        "rev": "c4a5f08a6ff74624ac576525765b06c79d2077e3",
         "type": "github"
       },
       "original": {
@@ -232,11 +232,11 @@
         "scenefx": "scenefx"
       },
       "locked": {
-        "lastModified": 1764122946,
-        "narHash": "sha256-kMp3AeKSS/9HkCYaWfuXubLf3O4uDrShgLvCow0Rkwg=",
+        "lastModified": 1764305346,
+        "narHash": "sha256-DSEvd+Gkg67VYbZdXd8vZ22L9K+Prjy83nTGTOZS/KI=",
         "owner": "DreamMaoMao",
         "repo": "mango",
-        "rev": "e2ee985b8fa72aa4755718187de4e520cdbf63e4",
+        "rev": "16368a8781b278fd76eb3757dc9692967e9db19f",
         "type": "github"
       },
       "original": {
@@ -246,6 +246,21 @@
       }
     },
     "mnw": {
+      "locked": {
+        "lastModified": 1758834834,
+        "narHash": "sha256-Y7IvY4F8vajZyp3WGf+KaiIVwondEkMFkt92Cr9NZmg=",
+        "owner": "Gerg-L",
+        "repo": "mnw",
+        "rev": "cfbc7d1cc832e318d0863a5fc91d940a96034001",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Gerg-L",
+        "repo": "mnw",
+        "type": "github"
+      }
+    },
+    "mnw_2": {
       "locked": {
         "lastModified": 1758834834,
         "narHash": "sha256-Y7IvY4F8vajZyp3WGf+KaiIVwondEkMFkt92Cr9NZmg=",
@@ -309,11 +324,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1763966396,
-        "narHash": "sha256-6eeL1YPcY1MV3DDStIDIdy/zZCDKgHdkCmsrLJFiZf0=",
+        "lastModified": 1764242076,
+        "narHash": "sha256-sKoIWfnijJ0+9e4wRvIgm/HgE27bzwQxcEmo2J/gNpI=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "5ae3b07d8d6527c42f17c876e404993199144b6a",
+        "rev": "2fad6eac6077f03fe109c4d4eb171cf96791faa4",
         "type": "github"
       },
       "original": {
@@ -394,7 +409,8 @@
         "nvf": "nvf",
         "quickshell": "quickshell",
         "silentSDDM": "silentSDDM",
-        "spicetify-nix": "spicetify-nix"
+        "spicetify-nix": "spicetify-nix",
+        "zaphkiel": "zaphkiel"
       }
     },
     "rust-overlay": {
@@ -402,11 +418,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1761791894,
-        "narHash": "sha256-myRIDh+PxaREz+z9LzbqBJF+SnTFJwkthKDX9zMyddY=",
+        "lastModified": 1764124769,
+        "narHash": "sha256-vcoOEy3i8AGJi3Y2C48hrf6CuL2h8W1gLe1gNt72Kxg=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "59c45eb69d9222a4362673141e00ff77842cd219",
+        "rev": "5da8c00313b4434f00aed6b4c94cd3b207bafdc5",
         "type": "github"
       },
       "original": {
@@ -577,6 +593,50 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_5": {
+      "locked": {
+        "lastModified": 1680978846,
+        "narHash": "sha256-Gtqg8b/v49BFDpDetjclCYXm8mAnTrUzR0JnE2nv5aw=",
+        "owner": "nix-systems",
+        "repo": "x86_64-linux",
+        "rev": "2ecfcac5e15790ba6ce360ceccddb15ad16d08a8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "x86_64-linux",
+        "type": "github"
+      }
+    },
+    "zaphkiel": {
+      "inputs": {
+        "agenix": [],
+        "booru-hs": [],
+        "crane": [],
+        "hjem": [],
+        "hjem-impure": [],
+        "hs-todo": [],
+        "mnw": "mnw_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "stash": [],
+        "systems": "systems_5"
+      },
+      "locked": {
+        "lastModified": 1764179477,
+        "narHash": "sha256-32imiAzUKQexsHEIRfLgkLfti1KGu7vSm3JvWyNeGMA=",
+        "owner": "Rexcrazy804",
+        "repo": "Zaphkiel",
+        "rev": "5d708cd273ecb799cc704fcd8f1962cf7dcf417b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Rexcrazy804",
+        "repo": "Zaphkiel",
         "type": "github"
       }
     }
