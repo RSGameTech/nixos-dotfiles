@@ -16,6 +16,7 @@
     lib.mkIf cfg.enable (lib.mkMerge [
       (let
         kokomiCursor = pkgs.callPackage ../../../../pkgs/kokomiCursor.nix {};
+        ayakaCursor = pkgs.callPackage ../../../../pkgs/ayakaCursor.nix {};
       in {
         programs.hyprland = {
           enable = true;
@@ -26,6 +27,7 @@
         qt.enable = true;
         environment.systemPackages = [
           kokomiCursor
+          ayakaCursor
 
           pkgs.kdePackages.qt6ct
           pkgs.kdePackages.breeze
