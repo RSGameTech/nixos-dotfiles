@@ -36,9 +36,6 @@
     zaphkiel = {
       url = "github:Rexcrazy804/Zaphkiel";
       inputs.nixpkgs.follows = "nixpkgs";
-      # optional
-      # inputs.quickshell.follows = "quickshell";
-      # inputs.systems.follows = "systems";
       inputs.hjem.follows = "";
       inputs.hjem-impure.follows = "";
       inputs.agenix.follows = "";

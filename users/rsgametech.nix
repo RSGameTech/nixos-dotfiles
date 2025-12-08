@@ -11,7 +11,7 @@ in {
   users.users.${username} = {
     inherit description;
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "adbusers" "gamemode" "audio" "multimedia" ];
+    extraGroups = [ "wheel" "networkmanager" "gamemode" "audio" "multimedia" ];
     hashedPasswordFile = config.age.secrets.rsgtPass.path;
     shell = pkgs.zsh;
     packages = with pkgs; [
@@ -28,7 +28,6 @@ in {
       cbonsai
       scrcpy
       anki-bin
-      openscad
     ];
   };
 
@@ -53,7 +52,6 @@ in {
       ".config/uwsm/env".source = ./config/uwsm/env;
       ".config/wlogout".source = ./config/wlogout;
       ".config/kitty".source = ./config/kitty;
-      # ".config/yazi".source = ./config/yazi;
     };
     xdg.config.files = let
       dots = config.hjem.users.${username}.impure.dotsDir;

@@ -2,10 +2,7 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./user-configuration.nix
     ];
-
-  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "euthymia";
   # Pick only one of the below networking options.
@@ -44,14 +41,15 @@
   };
 
   programsModule = {
-    deskEnv.hyprland.enable = true;
-    deskEnv.mangowm.enable = true;
+    deskEnv = {
+      hyprland.enable = true;
+      mangowm.enable = true;
+    };
     displayManager = {
       sddm.enable = true;
       # greetd.enable = true;
       # kurukuru.enable = true;
     };
-    obs-studio.enable = true;
     spicetify.enable = true;
     aagl.enable = true;
     nvf.enable = true;
@@ -67,7 +65,6 @@
     vim
     wget
     lshw
-    salut
     zstd
     cowsay
   ];

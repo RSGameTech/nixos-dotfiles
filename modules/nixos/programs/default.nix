@@ -3,9 +3,7 @@
     ./desk-env
     ./display-manager
     ./terminal
-    # ./sddm.nix
-    ./age.nix
-    ./obs-studio.nix
+    # ./age.nix
     ./spicetify.nix
     ./games.nix
     ./aagl.nix
