@@ -1,6 +1,8 @@
 {...}: {
   imports = [
+    ./keyd.nix
     ./printing.nix
+    ./openssh.nix
   ];
 
   services.libinput = {

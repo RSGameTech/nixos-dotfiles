@@ -28,6 +28,7 @@ in {
       cbonsai
       scrcpy
       anki-bin
+      usbutils
     ];
   };
 
