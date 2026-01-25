@@ -64,6 +64,7 @@
     });
 
     nixosConfigurations = {
+      # euthymia - Laptop - Lenovo LOQ 15IAX9
       euthymia = nixpkgs.lib.nixosSystem {
         specialArgs = { 
           inherit inputs outputs;
@@ -76,6 +77,7 @@
           inputs.agenix.nixosModules.default
         ];
       };
+      # irminsul - old laptop - Home Server (Have to be repair and make it)
       # irminsul = nixpkgs.lib.nixosSystem {
       #   specialArgs = {
       #     inherit inputs outputs;

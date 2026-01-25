@@ -43,7 +43,7 @@
   programsModule = {
     deskEnv = {
       hyprland.enable = true;
-      mangowm.enable = true;
+      # mangowm.enable = true;
     };
     displayManager = {
       sddm.enable = true;

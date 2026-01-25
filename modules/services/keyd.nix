@@ -7,7 +7,7 @@
           main = {
             esc = "capslock";
             capslock = "overload(control, esc)";
-            # LOL
+            # Wonderful piece of software :)
           };
         };
       };

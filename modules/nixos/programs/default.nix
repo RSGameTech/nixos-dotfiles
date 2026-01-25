@@ -1,9 +1,7 @@
 {...}: {
   imports = [
-    ./desk-env
+    # ./desk-env
     ./display-manager
-    ./terminal
-    # ./age.nix
     ./spicetify.nix
     ./games.nix
     ./aagl.nix

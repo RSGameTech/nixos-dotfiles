@@ -21,7 +21,9 @@
           pkgs.live-server
           pkgs.nodejs
         ];
-        shellHook = "echo Web Dev Environment Ready!";
+        shellHook = ''
+          echo "Web Dev Environment Ready!"
+        '';
       };
     });
   };

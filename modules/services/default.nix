@@ -7,9 +7,14 @@
 
   services.libinput = {
     enable = true;
-    mouse.accelProfile = "flat";
+    mouse = {
+      accelProfile = "flat";
+      accelSpeed = "0";
+      middleEmulation = false;
+    };
     touchpad = {
       accelProfile = "flat";
+      accelSpeed = "0";
       disableWhileTyping = true;
     };
   };

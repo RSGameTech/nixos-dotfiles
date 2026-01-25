@@ -29,6 +29,9 @@ in {
       scrcpy
       anki-bin
       usbutils
+      python312
+      python313Packages.pip
+      python313Packages.stdenv
     ];
   };
 
