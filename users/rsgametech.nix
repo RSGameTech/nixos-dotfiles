@@ -11,7 +11,7 @@ in {
   users.users.${username} = {
     inherit description;
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "gamemode" "audio" "multimedia" ];
+    extraGroups = [ "wheel" "networkmanager" "gamemode" "audio" "multimedia" "adbusers" "kvm" ];
     hashedPasswordFile = config.age.secrets.rsgtPass.path;
     shell = pkgs.zsh;
     packages = with pkgs; [
@@ -26,7 +26,9 @@ in {
       vscode
       bat
       cbonsai
+      android-tools
       scrcpy
+      qtscrcpy
       anki-bin
       usbutils
       python312

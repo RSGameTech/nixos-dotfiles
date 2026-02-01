@@ -2,12 +2,21 @@
   services.keyd = {
     enable = true;
     keyboards = {
-      default = {
+      # default = {
+      #   settings = {
+      #     main = {
+      #       esc = "capslock";
+      #       capslock = "esc";
+      #       # Wonderful piece of software :)
+      #     };
+      #   };
+      # };
+      laptop = {
+        ids = [ "048d:c996" ];
         settings = {
           main = {
             esc = "capslock";
-            capslock = "overload(control, esc)";
-            # Wonderful piece of software :)
+            capslock = "esc";
           };
         };
       };

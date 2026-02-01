@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    ./adb.nix
+    # ./adb.nix
     ./age.nix
     ./foot.nix
     ./git.nix

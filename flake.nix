@@ -98,6 +98,11 @@
         description = "A basic web template with a simple HTML structure.";
         welcomeText = "A minimal web-basic template! (by RSGameTech)";
       };
+      node-js-dev = {
+        path = ./templates/node-js-dev;
+        description = "A Node.js project template setup.";
+        welcomeText = "A Node.js template(by RSGameTech)";
+      };
     };
   };
 }
