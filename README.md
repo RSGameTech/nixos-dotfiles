@@ -1,6 +1,6 @@
 # My NixOS Configurations
 
-- ⚠️ Configuration are still work in progress.
+- ⚠️ Configuration are still work in progress. I Guess :)
 - Screenshot will be provided if I feel it look good to share
 
 # Hosts
