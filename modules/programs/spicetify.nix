@@ -6,7 +6,7 @@
   ...
 }: {
   options = {
-    programsModule.spicetify = {
+    modules.programs.spicetify = {
       enable = lib.mkEnableOption "Enable Spicetify";
     };
   };
@@ -18,7 +18,7 @@
   config = let
     spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
   in
-    lib.mkIf config.programsModule.spicetify.enable {
+    lib.mkIf config.modules.programs.spicetify.enable {
       programs.spicetify = {
         enable = true;
         enabledExtensions = with spicePkgs.extensions; [
@@ -41,8 +41,6 @@
         # colorScheme = "mocha";
 
         wayland = true;
-
-        # nix eval --impure --json --expr 'builtins.attrNames ((builtins.getFlake "github:Gerg-L/spicetify-nix").legacyPackages.x86_64-linux.snippets)'
       };
     };
 }

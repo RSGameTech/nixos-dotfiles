@@ -22,18 +22,13 @@ in {
       obsidian
       localsend
       vesktop
-      materialgram
       vscode
       bat
       cbonsai
       android-tools
       scrcpy
-      qtscrcpy
       anki-bin
       usbutils
-      python312
-      python313Packages.pip
-      python313Packages.stdenv
     ];
   };
 
@@ -42,7 +37,7 @@ in {
     owner = username;
   };
 
-  # hjem
+  # hjem stufs
   hjem.users.${username} = {
     enable = true;
     user = username;

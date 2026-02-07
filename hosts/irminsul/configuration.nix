@@ -2,13 +2,9 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./user-configuration.nix
     ];
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   networking.hostName = "irminsul";
-  # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
@@ -28,10 +24,6 @@
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  # bootModule = {
-  #   lanzaboote.enable = true; # Enable lanzaboote for secure boot
-  # };
-
   graphicsModule = {
     intel.enable = true;
     nvidia = {
@@ -47,32 +39,20 @@
     };
   };
 
-  programsModule = {
-    sddm-silent-theme = {
-      enable = true;
-    };
-    hyprland.enable = true;
-    obs-studio.enable = true;
-    # spicetify.enable = true;
-    # aagl.enable = true;
-  };
-
   environment.systemPackages = with pkgs; [
-    # lenovo-legion
-    libsForQt5.qt5.qtwayland
-    kdePackages.qtwayland
-    kitty
-    # matugen
-    pavucontrol
     vim
     wget
     lshw
-    salut
-    zstd
   ];
 
+  services.logind.settings.Login = {
+    HandleLidSwitch = "ignore";
+    HandleLidSwitchExternalPower = "ignore";
+    HandleLidSwitchDocked = "ignore";
+  };
+
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 22 8080 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
@@ -83,7 +63,7 @@
   # system.copySystemConfiguration = true;
 
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = "25.11"; # Did you read the comment?
 
 }
 

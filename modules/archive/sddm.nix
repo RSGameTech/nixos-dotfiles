@@ -8,9 +8,6 @@
   options = {
     programsModule.sddm-silent-theme = {
       enable = lib.mkEnableOption "Enable sddm silent theme";
-      # wallpaper = lib.mkOption {
-      #   default = ./suzume-door.png;
-      # };
     };
   };
 

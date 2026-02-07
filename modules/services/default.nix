@@ -1,7 +1,8 @@
 {...}: {
   imports = [
-    ./keyd.nix
-    ./printing.nix
+    ./keyd.nix # Option Added with sub option
+    ./ly.nix # Option Added without sub option
+    ./printing.nix # Option Added without sub option
     ./openssh.nix
   ];
 

@@ -1,10 +1,10 @@
 {...}: {
   imports = [
     ./boot.nix
+    ./common.nix
     ./audio.nix
-    ./services.nix
     ./network.nix
-    ./bluetooth.nix
+    ./bluetooth.nix # Option added
     ./fonts.nix
   ];
 }

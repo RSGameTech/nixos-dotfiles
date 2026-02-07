@@ -8,42 +8,19 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hjem-impure.url = "github:Rexcrazy804/hjem-impure";
-    silentSDDM = {
-      url = "github:uiriansan/SilentSDDM";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # silentSDDM = {
+    #   url = "github:uiriansan/SilentSDDM";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     agenix = {
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    mango = {
-      url = "github:DreamMaoMao/mango";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    quickshell = {
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nvf = {
-      url = "github:NotAShelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix"; 
-    aagl = {
-      url = "github:ezKEa/aagl-gtk-on-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    zaphkiel = {
-      url = "github:Rexcrazy804/Zaphkiel";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.hjem.follows = "";
-      inputs.hjem-impure.follows = "";
-      inputs.agenix.follows = "";
-      inputs.crane.follows = "";
-      inputs.stash.follows = "";
-      inputs.booru-hs.follows = "";
-      inputs.hs-todo.follows = "";
-    };
+    # nvf = {
+    #   url = "github:NotAShelf/nvf";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
 
   outputs = {
@@ -64,7 +41,7 @@
     });
 
     nixosConfigurations = {
-      # euthymia - Laptop - Lenovo LOQ 15IAX9
+      # euthymia - Main Laptop - Lenovo LOQ 15IAX9
       euthymia = nixpkgs.lib.nixosSystem {
         specialArgs = { 
           inherit inputs outputs;
@@ -77,19 +54,19 @@
           inputs.agenix.nixosModules.default
         ];
       };
-      # irminsul - old laptop - Home Server (Have to be repair and make it)
-      # irminsul = nixpkgs.lib.nixosSystem {
-      #   specialArgs = {
-      #     inherit inputs outputs;
-      #     users = ["rsgametech"];
-      #   };
-      #   modules = [
-      #     ./hosts/irminsul/configuration.nix
-      #     ./modules
-      #     ./users
-      #     inputs.agenix.nixosModules.default
-      #   ];
-      # };
+      #irminsul - Laptop HomeLab - ASUS X541UV
+      irminsul = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs outputs;
+          users = ["rsgametech"];
+        };
+        modules = [
+          ./hosts/irminsul/configuration.nix
+          ./modules
+          ./users
+          inputs.agenix.nixosModules.default
+        ];
+      };
     };
 
     templates = {

@@ -17,21 +17,22 @@ List of device I use
 ## irminsul ( ?? )
 
 - Laptop - Asus Vivobook X541UV
-- ????
+- CPU - i5 6198DU
+- GPU - GeForce 920MX
+- RAM - 8GB DDR4
 
 # To-Do
 
 - [x] ~Setup [hjem](https://github.com/feel-co/hjem) as soon as possible for better dotfiles management~
 - [x] ~Choose a wonderful and rememberable host name for all the device I own~
-- [x] ~Switch to Foot terminal from Kitty~ (Might switchback to kitty but not sure)
 - [ ] Configure Quickshell to make it more usable and ditch Waybar (Almost)
-- [ ] Learn to use NeoVim (Learning in progress)
+- [ ] Setup/Make 'irminsul' as a server
 
 # Overview
 
 - Compositor - [Hyprland](https://hypr.land/)
 - Graphical Bar - [Quickshell](https://quickshell.outfoxxed.me/)
-- App Launcher - Rofi Wayland
+- App Launcher - Fuzzel
 - Terminal - [Foot](https://codeberg.org/dnkl/foot)
 - Shell -zsh (Trying this for now, later I will switch when I find better one)
 

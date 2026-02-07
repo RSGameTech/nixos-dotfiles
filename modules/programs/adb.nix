@@ -1,6 +1,19 @@
-{...}: {
-  programs.adb = {
-    enable = true;
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: let
+  inherit (lib) mkEnableOption;
+  cfg = config.modules.programs.adb;
+in {
+  options.modules.programs.adb = {
+    enable = mkEnableOption "Enable adb";
   };
-  users.users.rsgametech.extraGroups = ["adbusers" "kvm"];
+
+  config = lib.mkIf cfg.enable {
+    environment.systemPackages = with pkgs; [
+      platform-tools
+    ];
+  };
 }

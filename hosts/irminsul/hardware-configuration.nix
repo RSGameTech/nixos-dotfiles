@@ -28,6 +28,11 @@
     [ { device = "/dev/disk/by-uuid/38d31b18-5684-4ff7-bbdf-6aa878a18604"; }
     ];
 
+  zramSwap = {
+    enable = true;
+    memoryPercent = 20;
+  };
+
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

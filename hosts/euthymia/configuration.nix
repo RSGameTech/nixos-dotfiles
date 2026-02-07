@@ -40,20 +40,27 @@
     };
   };
 
-  programsModule = {
-    deskEnv = {
+  modules = {
+    system = {
+      ly.enable = true;
+      bluetooth.enable = true;
+      printing.enable = true;
+      adb.enable = true;
+      keyd = {
+        enable = true;
+        deviceID = "048d:c996";
+    };
+    programs = {
       hyprland.enable = true;
-      # mangowm.enable = true;
+      spicetify.enable = true;
     };
-    displayManager = {
-      sddm.enable = true;
-      # greetd.enable = true;
-      # kurukuru.enable = true;
-    };
-    spicetify.enable = true;
-    aagl.enable = true;
-    nvf.enable = true;
   };
+
+  # programsModule = {
+  #   displayManager = {
+  #     sddm.enable = true;
+  #   };
+  # };
 
   environment.systemPackages = with pkgs; [
     lenovo-legion

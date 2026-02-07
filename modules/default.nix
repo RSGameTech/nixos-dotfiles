@@ -1,6 +1,5 @@
 {...}: {
   imports = [
-    ./nixos
     ./hardware
     ./system
     ./services
