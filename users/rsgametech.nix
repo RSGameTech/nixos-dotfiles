@@ -18,16 +18,8 @@ in {
       tree
       fastfetch
       btop-cuda
-      brave
-      obsidian
-      localsend
-      vesktop
-      vscode
       bat
       cbonsai
-      android-tools
-      scrcpy
-      anki-bin
       usbutils
     ];
   };

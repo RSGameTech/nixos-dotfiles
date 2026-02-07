@@ -49,18 +49,15 @@
       keyd = {
         enable = true;
         deviceID = "048d:c996";
+      };
     };
     programs = {
       hyprland.enable = true;
+      zsh.enable = true;
       spicetify.enable = true;
+      obs-studio.enable = true;
     };
   };
-
-  # programsModule = {
-  #   displayManager = {
-  #     sddm.enable = true;
-  #   };
-  # };
 
   environment.systemPackages = with pkgs; [
     lenovo-legion
@@ -74,6 +71,14 @@
     lshw
     zstd
     cowsay
+
+    brave
+    obsidian
+    localsend
+    vesktop
+    vscode
+    scrcpy
+    anki-bin
   ];
 
   # Open ports in the firewall.
@@ -89,6 +94,4 @@
 
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "25.05"; # Did you read the comment?
-
 }
-
