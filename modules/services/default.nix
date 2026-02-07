@@ -24,8 +24,4 @@
   #   enable = true;
   # }
   powerManagement.cpuFreqGovernor = "ondemand";
-  services.tlp = {
-    enable = true;
-    pd.enable = true;
-  };
 }

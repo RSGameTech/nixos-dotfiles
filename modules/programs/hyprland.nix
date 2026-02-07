@@ -20,7 +20,7 @@ in {
     };
     programs.hyprlock.enable = true;
     qt.enable = true;
-    environment.variables = {
+    environment.variables = [
       pkgs.quickshell
       pkgs.kdePackages.qtsvg
       pkgs.kdePackages.qtimageformats
@@ -40,7 +40,7 @@ in {
       pkgs.swappy
       pkgs.mpv
       pkgs.imv
-    };
+    ];
     modules.programs = {
       foot.enable = true;
     };

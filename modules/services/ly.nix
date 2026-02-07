@@ -15,7 +15,7 @@ in {
     services.displayManager.ly = {
       enable = true;
       settings = {
-        animation = none;
+        animation = null;
         allow_empty_password = false;
         clear_password = true;
         auth_fails = 5;
