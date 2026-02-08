@@ -9,11 +9,6 @@
 in {
   options.modules.programs.foot = {
     enable = mkEnableOption "Enable foot";
-    # exampleOption = lib.mkOption {
-    #   type = lib.types.str;
-    #   default = "example";
-    #   description = "An example option";
-    # };
   };
 
   config = lib.mkIf cfg.enable {

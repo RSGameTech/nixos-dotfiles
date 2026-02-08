@@ -13,8 +13,8 @@ in {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "gamemode" "audio" "multimedia" "adbusers" "kvm" ];
     hashedPasswordFile = config.age.secrets.rsgtPass.path;
-    shell = pkgs.bash;
-    ignoreShellProgramCheck = true;
+    shell = pkgs.zsh;
+    # ignoreShellProgramCheck = true;
     packages = with pkgs; [
       tree
       fastfetch

@@ -24,6 +24,10 @@
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
+  modules.programs = {
+    zsh.enable = true;
+  };
+
   graphicsModule = {
     intel.enable = true;
     nvidia = {

@@ -16,7 +16,6 @@ in {
       enable = true;
       enableCompletion = true;
       enableBashCompletion = true;
-      autosuggestions.enable = true;
       syntaxHighlighting = {
         enable = true;
         highlighters = [ "main" "brackets" "pattern" "root" "line" ];
