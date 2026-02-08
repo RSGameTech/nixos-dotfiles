@@ -4,5 +4,6 @@
     ./system
     ./services
     ./programs
+    ./server
   ];
 }
