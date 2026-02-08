@@ -21,6 +21,7 @@ in {
   config = lib.mkIf cfg.enable {
     services.glance = {
       enable = true;
+      server.port = 8800;
       settings = {
         pages = [
           {
