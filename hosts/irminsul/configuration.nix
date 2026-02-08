@@ -30,7 +30,7 @@
     };
     server = {
       glance.enable = true;
-    }
+    };
   };
 
   graphicsModule = {
