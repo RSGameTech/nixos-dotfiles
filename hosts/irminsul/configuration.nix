@@ -29,6 +29,7 @@
       zsh.enable = true;
     };
     server = {
+      cloudflared.enable = true;
       glance.enable = true;
     };
   };
