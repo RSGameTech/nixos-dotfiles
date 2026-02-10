@@ -10,6 +10,6 @@ let
   };
 in {
   "secret1.age".publicKeys = users.rsgametech;
-  # "cloudflare-tunnel.age".publicKeys = hosts.irminsul;
+  "cloudflared-tunnel.age".publicKeys = hosts.irminsul;
   # "secret2.age".publicKeys = users.rsgametech;
 }
