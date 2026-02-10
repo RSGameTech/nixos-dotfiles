@@ -36,9 +36,9 @@
       services.xserver.videoDrivers = [ "nvidia" ];
       hardware.nvidia = {
         modesetting.enable = true;
-        dynamicBoost.enable = true;
+        dynamicBoost.enable = cfg.hybrid.enable;
         powerManagement = {
-          enable = true;
+          enable = cfg.hybrid.enable;
           finegrained = cfg.hybrid.enable;
         };
         open = true;

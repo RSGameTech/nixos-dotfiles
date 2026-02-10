@@ -23,7 +23,7 @@ in {
       enable = true;
       settings = {
         server.port = 8800;
-        server.host = "0.0.0.0";
+        server.host = "127.0.0.1";
         pages = [
           {
             name = "Home";

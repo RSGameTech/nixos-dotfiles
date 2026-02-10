@@ -38,14 +38,9 @@
     intel.enable = true;
     nvidia = {
       enable = true;
-      # hybrid = {
-      #   enable = true;
-      #   igpu = {
-      #     vendor = "intel";
-      #     port = "PCI:0:2:0";
-      #   };
-      #   dgpu.port = "PCI:1:0:0";
-      # };
+      hybrid = {
+        enable = false;
+      };
     };
   };
 
