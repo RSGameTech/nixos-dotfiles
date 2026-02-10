@@ -9,15 +9,13 @@
 in {
   options.modules.server.cloudflared = {
     enable = mkEnableOption "Enable Cloudflared";
-
-    # exampleOption = lib.mkOption {
-    #   type = lib.types.str;
-    #   default = "example";
-    #   description = "An example option";
-    # };
   };
 
   config = lib.mkIf cfg.enable {
+    age.secrets.cloudflaredTunnel = {
+      file = ../../secrets/cloudflared-tunnel.age;
+      mode = "600";
+    }; 
     services.cloudflared = {
       enable = true;
       tunnels = {
@@ -32,10 +30,6 @@ in {
         };
       };
     };
-
-    age.secrets.cloudflaredTunnel = {
-      file = ../../secrets/cloudflared-tunnel.age;
-      mode = "600";
-    };
+      
   };
 }
