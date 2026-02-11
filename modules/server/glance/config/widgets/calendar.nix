@@ -1,0 +1,4 @@
+{
+  type = "calendar";
+  first-day-of-week = "monday";
+}
