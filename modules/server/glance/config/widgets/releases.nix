@@ -5,5 +5,5 @@
   repositories = [
     "futo-org/android-keyboard"
     "hyprwm/Hyprland"
-  ]
+  ];
 }

@@ -26,9 +26,9 @@ in {
           port = 8800;
           host = "127.0.0.1";
         };
-        branding = import (configPath/branding.nix);
-        # theme = import (configPath/theme.nix);
-        pages = import (configPath/pages.nix);
+        branding = import (configPath + /branding.nix);
+        # theme = import (configPath + /theme.nix);
+        pages = import (configPath + /pages.nix);
       };
       openFirewall = true;
     };

@@ -1,7 +1,4 @@
-{
-  config,
-  ...
-}: let
+let
   widgetPath = ./widgets;
   widgets = {
     clock = import (widgetPath + /clock.nix);
