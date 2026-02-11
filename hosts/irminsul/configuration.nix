@@ -31,6 +31,7 @@
     server = {
       cloudflared.enable = true;
       glance.enable = true;
+      microbin.enable = true;
     };
   };
 

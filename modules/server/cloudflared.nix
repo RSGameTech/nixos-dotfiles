@@ -25,6 +25,9 @@ in {
             "glance.rsgametech.me" = {
               service = "http://127.0.0.1:8800";
             };
+            "bin.rsgametech.me" = {
+              service = "http://127.0.0.1:8801";
+            };
           };
           default = "http_status:404";
         };
