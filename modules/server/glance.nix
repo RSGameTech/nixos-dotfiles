@@ -54,7 +54,16 @@ in {
                       "UCAbAsEZ-0LccTNbl8r-3EaQ"
                       "UCovagaiL6pBYWfvThaXVniA"
                     ];
-                    limit = 20;
+                    style = "vertical-list";
+                    limit = 10;
+                  }
+                  {
+                    type = "reddit";
+                    subreddits = "homelabindia";
+                    style = "vertical-list";
+                    show-thumbnails = true;
+                    limit = 12;
+                    collapse-after = 4;
                   }
                 ];
               }
