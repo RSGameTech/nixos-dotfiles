@@ -24,6 +24,15 @@ in {
       settings = {
         server.port = 8800;
         server.host = "127.0.0.1";
+        # Branding
+        branding = {
+          hide-footer = true;
+          # logo-url = "/assets/logo.png"
+          # app-name = "My Dashboard";
+          # favicon-url = "/assets/logo.png";
+          # app-icon-url = "/assets/logo.png";
+        };
+        # Pages
         pages = [
           {
             name = "Home";
@@ -40,8 +49,12 @@ in {
                 size = "full";
                 widgets = [
                   {
-                    title = "Hacker News";
-                    type = "hacker-news";
+                    type = "videos";
+                    channels = [
+                      "UCAbAsEZ-0LccTNbl8r-3EaQ"
+                      "UCovagaiL6pBYWfvThaXVniA"
+                    ];
+                    limit = 20;
                   }
                 ];
               }
@@ -49,8 +62,23 @@ in {
                 size = "small";
                 widgets = [
                   {
+                    type = "clock";
+                    title-url = "https://www.timeanddate.com/worldclock/india/kochi";
+                    hour-format = "12h";
+                    timezones = [
+                      {
+                        timezone = "Asia/Kolkata";
+                        label = "Kolkata, India";
+                      }
+                      {
+                        timezone = "Asia/Tokyo";
+                        label = "Tokyo, Japan";
+                      }
+                    ];
+                  }
+                  {
                     type = "weather";
-                    location = "Kochi, India";
+                    location = "Ernakulam, India";
                   }
                 ];
               }
