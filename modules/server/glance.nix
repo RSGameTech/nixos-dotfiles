@@ -59,7 +59,7 @@ in {
                   }
                   {
                     type = "reddit";
-                    subreddits = "homelabindia";
+                    subreddit = "homelabindia";
                     style = "vertical-list";
                     show-thumbnails = true;
                     limit = 12;
