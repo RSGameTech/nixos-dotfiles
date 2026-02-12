@@ -23,6 +23,10 @@ in {
       settings = {
         MICROBIN_PORT = 8801;
         MICROBIN_BIND = "127.0.0.1";
+        MICROBIN_HASH_IDS = true;
+        MICROBIN_ENABLE_BURN_AFTER = true;
+        MICROBIN_HIDE_LOGO = true;
+        MICROBIN_HIDE_FOOTER = true;
       };
     };
   };
